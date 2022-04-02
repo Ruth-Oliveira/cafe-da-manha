@@ -30,3 +30,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Observaçoes:
 
 Foi criado uma lista para armazenamento. O banco não foi criado.
+
+## Lista de Funcionários utilizados:
+
+NOME: Laura
+CPF: 07255329047
+
+NOME: Bernardo
+CPF: 53441877004
+
+NOME: Lorenzo
+CPF: 67557094093
+
+NOME: Maria Clara
+CPF: 24154769006
+
+NOME: Sophia
+CPF: 39290308028
+
+NOME: Miguel
+CPF: 47423227030

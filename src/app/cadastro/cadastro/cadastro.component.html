@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+
+    <div>
+
+      <h4>O que vou levar para o café da manhã:</h4>
+
+      <label for="fname">CPF: </label>
+      <input [(ngModel)]="funcionario.cpf" type="text" id="cpf" name="CPF">
+      <button type="button" (click)="verificarFuncionario()">Pesquisar</button>
+
+    </div>
+
+    <div *ngIf=" isFuncionario ">
+
+      <h4>
+        {{funcionario.nome}}
+      </h4>
+
+      <label for="fname">Item: </label>
+      <input [(ngModel)]="itemFuncionario.item" type="text" id="item" name="Item">
+
+      <label for="fname">Quantidade: </label>
+      <input [(ngModel)]="itemFuncionario.quantidade" type="text" id="qtd" name="Quantidade">
+
+      <label for="fname">Unidade de medida: </label>
+      <input [(ngModel)]="itemFuncionario.unidadeMedida" type="text" id="undMedida" name="UnidadeMedida">
+
+      <br>
+      <br>
+
+      <button *ngIf="!foiIncluido" type="button" (click)="adicionar()">Adicionar</button>
+      <button type="button" (click)="alterar()">Alterar</button>
+      <button type="button" (click)="excluir()">Excluir</button>
+
+    </div>
+
+    <br>
+    <br>
+
+    <button type="button" (click)="listar()">Listar</button>
+    <button type="button" (click)="limpar()">Voltar</button>
+
+    <br>
+    <br>
+
+    <div *ngIf="listarItens.length > 0">
+      <ul *ngFor="let item of listarItens">
+        <li>{{ item }}</li>
+      </ul>
+    </div>
+
+  </body>
+
+  <script src="./cadastro.component.ts"></script>
+
+</html>
